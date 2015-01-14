@@ -15,5 +15,7 @@ RUN chmod +x /usr/local/bin/wrapdocker
 
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
+ADD loop.sh /root/
+RUN /bin/bash /root/loop.sh
 CMD ["wrapdocker"]
 
